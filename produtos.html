@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Perucas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-produtos">
+
+    <header class="header-produtos">
+        <div class="logo">Loja de Perucas</div>
+        <input type="text" id="busca" placeholder="Buscar perucas...">
+    </header>
+
+    <div class="container-produtos">
+        <aside class="sidebar-filtros">
+            <h3>Categorias</h3>
+            <ul>
+                <li><button class="btn-filtro active" data-filter="todas">Todas</button></li>
+                <li><button class="btn-filtro" data-filter="feminina">Femininas</button></li>
+                <li><button class="btn-filtro" data-filter="masculina">Masculinas</button></li>
+            </ul>
+        </aside>
+
+        <main class="grid-produtos" id="grid-produtos">
+
+            <div class="card-produto" data-category="feminina">
+                <div class="imagem-produto">
+                    <img src="https://via.placeholder.com/250x250/2c2015/d9a441?text=Peruca+Feminina+1" alt="Peruca Feminina Longa">
+                </div>
+                <div class="info-produto">
+                    <h2 class="nome-produto">Peruca Feminina Longa Ondulada Castanha Natural</h2>
+                    <p class="preco-produto">R$ 299,90</p>
+                    <span class="tag-destaque">Frete Grátis</span>
+                </div>
+            </div>
+
+            <div class="card-produto" data-category="masculina">
+                <div class="imagem-produto">
+                    <img src="https://via.placeholder.com/250x250/2c2015/d9a441?text=Peruca+Masculina+1" alt="Peruca Masculina Curta">
+                </div>
+                <div class="info-produto">
+                    <h2 class="nome-produto">Prótese Capilar Masculina Curta Fio Sintético</h2>
+                    <p class="preco-produto">R$ 189,50</p>
+                    <span class="tag-destaque">Envio Rápido</span>
+                </div>
+            </div>
+
+
+            <div class="card-produto" data-category="feminina">
+                <div class="imagem-produto">
+                    <img src="https://via.placeholder.com/250x250/2c2015/d9a441?text=Peruca+Feminina+2" alt="Peruca Feminina Curta">
+                </div>
+                <div class="info-produto">
+                    <h2 class="nome-produto">Peruca Feminina Chanel Curta Loira Premium</h2>
+                    <p class="preco-produto">R$ 349,00</p>
+                    <span class="tag-destaque">Frete Grátis</span>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="\scripts\produtos.js"></script>
+</body>
+</html>
