@@ -1,3 +1,110 @@
+// =====================================================
+// LOGIN
+// =====================================================
+
+const formLogin = document.getElementById("loginForm");
+const username = document.getElementById("username");
+const password = document.getElementById("password");
+const message = document.getElementById("message");
+const togglePassword = document.getElementById("togglePassword");
+
+const VALID_USERNAME = "admin";
+const VALID_PASSWORD = "0211";
+
+
+// =====================================================
+// MOSTRAR / OCULTAR SENHA
+// =====================================================
+
+if (togglePassword && password) {
+
+    togglePassword.addEventListener("click", () => {
+
+        const isPassword = password.type === "password";
+
+        password.type = isPassword ? "text" : "password";
+
+        togglePassword.textContent = isPassword ? "◉" : "◌";
+
+        togglePassword.setAttribute(
+            "aria-label",
+            isPassword ? "Ocultar senha" : "Mostrar senha"
+        );
+
+    });
+
+}
+
+
+// =====================================================
+// VALIDAÇÃO DO LOGIN
+// =====================================================
+
+if (formLogin) {
+
+    formLogin.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const user = username.value.trim();
+        const pass = password.value;
+
+        // Limpa mensagem anterior
+        if (message) {
+            message.className = "message";
+            message.textContent = "";
+        }
+
+
+        // =================================================
+        // LOGIN CORRETO
+        // =================================================
+
+        if (
+            user === VALID_USERNAME &&
+            pass === VALID_PASSWORD
+        ) {
+
+            if (message) {
+                message.textContent =
+                    "Login realizado! Entrando...";
+
+                message.classList.add("success");
+            }
+
+            // Vai para a página principal
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 500);
+
+            return;
+        }
+
+
+        // =================================================
+        // LOGIN INCORRETO
+        // =================================================
+
+        if (message) {
+
+            message.textContent =
+                "Usuário ou senha incorretos.";
+
+            message.classList.add("error");
+        }
+
+        // Limpa o campo de senha
+        password.value = "";
+
+        // Volta o foco para senha
+        password.focus();
+
+    });
+
+}
+
+// site pricipal:
+
 var toggle = document.getElementById('navToggle');
 var list = document.getElementById('navList');
 if (toggle) {
