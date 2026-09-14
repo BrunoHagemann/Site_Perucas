@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | Wig Admin</title>
+
+  <link rel="stylesheet" href="styleLogin.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       FUNDO / VÓRTICE
+  ====================================================== -->
+
+  <div class="background">
+
+    <!-- Espiral principal -->
+    <svg
+      class="spiral"
+      viewBox="0 0 1000 1000"
+      aria-hidden="true"
+    >
+
+      <!-- Espiral principal -->
+      <path
+        class="spiral-main"
+        d="
+          M500 500
+          C500 475 525 465 548 480
+          C585 505 580 555 545 580
+          C490 620 410 595 380 535
+          C335 445 390 345 485 325
+          C610 300 715 390 720 515
+          C730 680 595 805 440 805
+          C245 805 115 655 135 470
+          C155 260 345 120 555 155
+          C790 195 920 400 865 625
+          C810 850 590 955 370 895
+          C145 835 25 620 80 400
+        "
+      />
+
+      <!-- Segunda linha artística -->
+      <path
+        class="spiral-secondary"
+        d="
+          M500 500
+          C520 475 555 485 565 515
+          C580 560 545 600 500 605
+          C425 610 375 555 385 485
+          C400 395 490 350 575 380
+          C690 420 735 545 685 650
+          C620 790 445 820 315 740
+          C150 640 130 420 250 275
+          C390 110 635 120 790 260
+        "
+      />
+
+      <!-- Traço interno -->
+      <path
+        class="spiral-inner"
+        d="
+          M500 500
+          C490 480 505 460 530 465
+          C565 475 575 515 555 545
+          C520 590 450 575 420 530
+          C380 465 420 390 490 375
+          C590 355 670 430 675 530
+        "
+      />
+
+    </svg>
+
+
+    <!-- Partículas discretas -->
+    <div class="dust dust-1"></div>
+    <div class="dust dust-2"></div>
+    <div class="dust dust-3"></div>
+    <div class="dust dust-4"></div>
+    <div class="dust dust-5"></div>
+    <div class="dust dust-6"></div>
+
+  </div>
+
+
+  <!-- =====================================================
+       LOGIN
+  ====================================================== -->
+
+  <main class="login-card">
+
+    <div class="logo">
+      W
+    </div>
+
+    <p class="eyebrow">
+      PAINEL ADMINISTRATIVO
+    </p>
+
+    <h1>
+      Bem-vindo de volta
+    </h1>
+
+    <p class="subtitle">
+      Entre para acessar o painel.
+    </p>
+
+
+    <!-- FORMULÁRIO -->
+
+    <form id="loginForm">
+
+      <label for="username">
+        Usuário
+      </label>
+
+      <input
+        id="username"
+        name="username"
+        type="text"
+        placeholder="Digite seu usuário"
+        autocomplete="username"
+        required
+      >
+
+
+      <label for="password">
+        Senha
+      </label>
+
+      <div class="password-box">
+
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Digite sua senha"
+          autocomplete="current-password"
+          required
+        >
+
+        <button
+          type="button"
+          id="togglePassword"
+          aria-label="Mostrar senha"
+        >
+          ◉
+        </button>
+
+      </div>
+
+
+      <button
+        class="login-button"
+        type="submit"
+      >
+        ENTRAR
+
+        <span>
+          →
+        </span>
+
+      </button>
+
+
+      <p
+        id="message"
+        class="message"
+        aria-live="polite"
+      ></p>
+
+    </form>
+
+
+    <!-- =====================================================
+         DICA
+    ====================================================== -->
+
+    <div class="tip">
+
+      <span class="tip-icon">
+        ?
+      </span>
+
+      <div>
+
+        <strong>
+          Dica de acesso
+        </strong>
+
+        <small>
+          A senha padrão é
+          <b>0211</b>
+        </small>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
